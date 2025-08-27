@@ -1,0 +1,28 @@
+CREAR PLUGIN DE IDEMPIERE
+
+--IDEMPIERE-PLUGIN-SCAFFOLD = CREAR PLUGIN PARA IDEMPIERE
+
+--IDEMPIERE-TARGET-PLATFORM-PLUGIN = COMPILAR EL PLUGIN 
+
+1 - entrar a la carpeta plugin-scaffold y abrir la consola en esa carpeta
+
+2- correr el archivo plugin-scaffold
+	-Name [] (nombre de la carpeta del plugin, ej: plugin prueba)
+	-Idempiere version [] (version de idempiere, deberia ser la misma de IDEMPIERE_HOME) presionar enter de ser el mismo
+	-Symbolic name [] (nombre de las carpetas dentro del plugin, ej: org.plugin.prueba)
+	-Vendor[] presionar enter
+	-repository path[] presionar enter
+	-root package [] (mismo que symbolic name, ej: org.plugin.prueba)
+	-Idempiere path[] (ruta a idempiere, debe ser la misma que IDEMPIERE_HOME)
+	-Target Path [] (ruta donde se creara el plugin (puede ser cualquiera)
+
+3 - ir a la carpeta idempiere-target-platform-plugin
+4 correr el archivo plugin-builder + ruta de la carpeta src del plugin que queremos compilar (plugin-builder /plugin-prueba/org.plugin.prueba)
+
+si todo funciono, el plugin construido (.jar) deberia estar en la carpeta target de la carpeta idempiere-target-platform-plugin
+
+-- para aplicar el plugin en idempiere, luego de tener idempiere corriendo:
+
+1- ir a idempiere en el navegador y luego plug-in console
+2- install/update y elegimos el .jar del plugin que queremos subir
+3- seleccionamos start bundle, refresh packages y start level 5
